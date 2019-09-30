@@ -31,4 +31,11 @@ class ArticleViewController: UIViewController {
             ivArticle.isHidden = true
         }
     }
+    
+    public override func prepare(for segue: UIStoryboardSegue,
+                                 sender: Any?) {
+        guard let viewController = segue.destination
+            as? BrowserViewController else { return }
+        viewController.strUrl = selectedArticle?.url
+    }
 }

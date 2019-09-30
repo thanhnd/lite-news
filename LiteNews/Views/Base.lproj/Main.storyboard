@@ -289,7 +289,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KAP-0d-F3S">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAP-0d-F3S">
                                                 <rect key="frame" x="8" y="242.5" width="359" height="311.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -331,7 +331,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nBe-YL-pb2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5eG-TN-WsO"/>
+                    <navigationItem key="navigationItem" id="5eG-TN-WsO">
+                        <barButtonItem key="rightBarButtonItem" title="Open" id="LXe-ar-kvb">
+                            <connections>
+                                <segue destination="3Ro-HD-f5c" kind="show" id="Xi7-he-rQb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ivArticle" destination="VXb-mH-goA" id="YYQ-0c-VK1"/>
                         <outlet property="lblTitle" destination="bJm-VQ-LUT" id="Owp-eq-0Hu"/>
@@ -341,6 +347,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZE-66-DDx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2696.8000000000002" y="-819.04047976011998"/>
+        </scene>
+        <!--Browser View Controller-->
+        <scene sceneID="BWC-uF-XS0">
+            <objects>
+                <viewController id="3Ro-HD-f5c" customClass="BrowserViewController" customModule="LiteNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="99Y-Xd-hzQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FoN-Tv-USt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FoN-Tv-USt" firstAttribute="leading" secondItem="Gt8-HU-4GK" secondAttribute="leading" id="HpZ-we-8QD"/>
+                            <constraint firstItem="FoN-Tv-USt" firstAttribute="top" secondItem="Gt8-HU-4GK" secondAttribute="top" id="km3-e1-fIm"/>
+                            <constraint firstItem="Gt8-HU-4GK" firstAttribute="bottom" secondItem="FoN-Tv-USt" secondAttribute="bottom" id="pPd-jo-xKh"/>
+                            <constraint firstItem="Gt8-HU-4GK" firstAttribute="trailing" secondItem="FoN-Tv-USt" secondAttribute="trailing" id="wna-To-7Q2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gt8-HU-4GK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H7T-Ih-XKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3505" y="-825"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7RV-Cc-cxP">
