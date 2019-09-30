@@ -18,7 +18,7 @@ class TopHeadlineViewController: UIViewController {
         }
     }
     // MARK: - Properties
-    public var articles = [Article]() {
+    private var articles = [Article]() {
         didSet {
             tableView.reloadData()
         }
@@ -90,9 +90,39 @@ extension TopHeadlineViewController: UITableViewDelegate {
     
     public override func prepare(for segue: UIStoryboardSegue,
                                  sender: Any?) {
-//        guard let viewController = segue.destination
-//            as? QuestionViewController else { return }
-//        viewController.questionGroup = selectedQuestionGroup
+        guard let viewController = segue.destination
+            as? ArticleViewController else { return }
+        viewController.selectedArticle = selectedArticle
+    }
+}
+
+enum TableStateString {
+    case Empty
+    case Loading
+    case Failed
+    case Items([String])
+    
+    var count: Int {
+        switch self {
+        case let .Items(items):
+            return items.count
+        default:
+            return 1
+        }
+    }
+    
+    func value(row: Int) -> String {
+        switch self {
+        case .Loading:
+            return "Loading..."
+        case .Failed:
+            return "Failed"
+        case .Empty:
+            return "Empty"
+        case let .Items(items):
+            let item = items[row]
+            return item
+        }
     }
 }
 
