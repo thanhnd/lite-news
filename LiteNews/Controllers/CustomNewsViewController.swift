@@ -44,7 +44,7 @@ class  CustomNewsViewController: UIViewController {
         tableView.isHidden = true
     }
     
-    func getTopHeadlineRequest(_ title: String, completion: @escaping (ResponseModel?) -> Void) {
+    func getRequest(_ title: String, completion: @escaping (ResponseModel?) -> Void) {
         
         let url = "https://newsapi.org/v2/everything?q=\(title)&apiKey=67a45fda74af4ca5847f43e6940c792e"
         Alamofire.request(url).response { response in
@@ -64,8 +64,8 @@ class  CustomNewsViewController: UIViewController {
 extension CustomNewsViewController: TagListViewDelegate {
     func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
         print("Tag pressed: \(title), \(sender)")
-        
-        getTopHeadlineRequest(title) { (responseModel) in
+        self.title = title.capitalized
+        getRequest(title) { (responseModel) in
             self.articles = responseModel?.articles ?? [Article]()
         }
     }

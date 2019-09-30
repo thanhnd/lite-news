@@ -134,6 +134,7 @@
                                             <outlet property="ivArticle" destination="kSK-zE-mAo" id="rPB-fg-gQe"/>
                                             <outlet property="lblDescription" destination="bMK-Jo-0a0" id="TSf-RX-08P"/>
                                             <outlet property="lblTitle" destination="ESq-1X-YOq" id="i3p-mV-jdI"/>
+                                            <segue destination="OPz-6f-PRH" kind="show" id="ffO-Ez-Dy6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -152,7 +153,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jyq-PM-mzt"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0iR-sT-A86"/>
+                    <navigationItem key="navigationItem" title="Everything" id="0iR-sT-A86"/>
                     <connections>
                         <outlet property="tableView" destination="nqG-pF-j6j" id="ouE-i7-A78"/>
                         <outlet property="tlvTags" destination="Otl-B9-mqo" id="4gL-cG-IkM"/>
@@ -423,4 +424,7 @@
             <point key="canvasLocation" x="1097" y="782"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ffO-Ez-Dy6"/>
+    </inferredMetricsTieBreakers>
 </document>
