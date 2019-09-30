@@ -19,6 +19,7 @@
 		9259CF09233D255700CC58D5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9259CF08233D255700CC58D5 /* ProfileViewController.swift */; };
 		9259CF0B233D309500CC58D5 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9259CF0A233D309500CC58D5 /* ResponseModel.swift */; };
 		9259CF0D233D82DE00CC58D5 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9259CF0C233D82DE00CC58D5 /* ArticleCell.swift */; };
+		9259CF0F233DF7E500CC58D5 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9259CF0E233DF7E500CC58D5 /* ArticleViewController.swift */; };
 		FA43D954A7548EF8B074A236 /* Pods_LiteNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E504DDD4333E7576261C44F /* Pods_LiteNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		9259CF08233D255700CC58D5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9259CF0A233D309500CC58D5 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		9259CF0C233D82DE00CC58D5 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		9259CF0E233DF7E500CC58D5 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		EABCD2F22F072324588AD990 /* Pods-LiteNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiteNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-LiteNewsTests/Pods-LiteNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFAA7F51EB784B18194ADA0B /* Pods-LiteNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiteNewsTests.release.xcconfig"; path = "Target Support Files/Pods-LiteNewsTests/Pods-LiteNewsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +153,7 @@
 				9259CEE0233D223400CC58D5 /* TopHeadlineViewController.swift */,
 				9259CF06233D24EA00CC58D5 /* CustomNewsViewController.swift */,
 				9259CF08233D255700CC58D5 /* ProfileViewController.swift */,
+				9259CF0E233DF7E500CC58D5 /* ArticleViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -333,18 +336,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LiteNews/Pods-LiteNews-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-LiteNews/Pods-LiteNews-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-LiteNews/Pods-LiteNews-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -359,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9259CF07233D24EA00CC58D5 /* CustomNewsViewController.swift in Sources */,
+				9259CF0F233DF7E500CC58D5 /* ArticleViewController.swift in Sources */,
 				9259CEE1233D223400CC58D5 /* TopHeadlineViewController.swift in Sources */,
 				9259CF09233D255700CC58D5 /* ProfileViewController.swift in Sources */,
 				9259CEE7233D223400CC58D5 /* LiteNews.xcdatamodeld in Sources */,

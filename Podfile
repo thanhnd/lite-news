@@ -8,6 +8,7 @@ target 'LiteNews' do
   # Pods for LiteNews
   pod 'Alamofire'
   pod 'AlamofireImage'
+  pod 'TagListView', '~> 1.0'
 
   target 'LiteNewsTests' do
     inherit! :search_paths
