@@ -50,7 +50,7 @@
                                                 <color key="value" red="0.41181051889999998" green="0.72279604490000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="tagHighlightedBackgroundColor">
-                                                <color key="value" red="0.31764705879999999" green="0.64313725489999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="1" green="0.44627497739999999" blue="0.40564700190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="tagSelectedBackgroundColor">
                                                 <color key="value" red="0.35264455484873036" green="0.54304220697895134" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -153,8 +153,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jyq-PM-mzt"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Everything" id="0iR-sT-A86"/>
+                    <navigationItem key="navigationItem" title="Everything" id="0iR-sT-A86">
+                        <barButtonItem key="rightBarButtonItem" title="Change" id="CBn-Qx-HtF">
+                            <connections>
+                                <action selector="onClickUpdate:" destination="Biy-iV-DyM" id="gqi-n7-TL3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="bbiUpdate" destination="CBn-Qx-HtF" id="C4B-wI-yA7"/>
                         <outlet property="tableView" destination="nqG-pF-j6j" id="ouE-i7-A78"/>
                         <outlet property="tlvTags" destination="Otl-B9-mqo" id="4gL-cG-IkM"/>
                         <outlet property="vTag" destination="uqx-iD-C0U" id="HGo-Fq-yxX"/>

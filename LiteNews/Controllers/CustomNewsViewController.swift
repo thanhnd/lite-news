@@ -23,6 +23,8 @@ class  CustomNewsViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var bbiUpdate: UIBarButtonItem!
+    
     // MARK: - Properties
     let tags = ["bitcoin", "apple", "earthquake", "animal"]
     
@@ -31,6 +33,7 @@ class  CustomNewsViewController: UIViewController {
             tableView.reloadData()
             vTag.isHidden = true
             tableView.isHidden = false
+            bbiUpdate.isEnabled = true
         }
     }
     private var selectedArticle: Article?
@@ -42,6 +45,13 @@ class  CustomNewsViewController: UIViewController {
         tlvTags.addTags(tags)
         vTag.isHidden = false
         tableView.isHidden = true
+        bbiUpdate.isEnabled = false
+    }
+    
+    @IBAction func onClickUpdate(_ sender: UIBarButtonItem) {
+        vTag.isHidden = false
+        tableView.isHidden = true
+        bbiUpdate.isEnabled = false
     }
     
     func getRequest(_ title: String, completion: @escaping (ResponseModel?) -> Void) {
